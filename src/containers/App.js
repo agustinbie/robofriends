@@ -110,7 +110,7 @@ class App extends Component{
 	// }// life cycle methods, react primero ejecuta constructor, luego render, luego componenDidMount, y si el state se actualiza vuelve a ejecutar el render
 	componentDidMount(){
 		fetch ("https://jsonplaceholder.typicode.com/users").then(response=> response.json()).then(users => this.setState({robots: users}))
-	}
+	}// el metodo fetch viene con su propio metodo .json() que es parsear el json a javascript. then response devuelve una response parseada y el segundo then hace que esa nueva data "users" pase a actualizar el state
 
 }
 
